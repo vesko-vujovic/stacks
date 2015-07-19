@@ -4,11 +4,39 @@
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script src="stacks.js"></script>
-    <title></title>
+    <title>Stacks</title>
 </head>
 <body>
 
    <script>
+      var s = new Stack();
+       s.push("Vesko");
+       s.push("Vesna");
+       s.push("Marko");
+       s.push("Janko");
+       var peek       = s.peek();
+       var length     = s.length();
+       var pop        = s.pop();
+       var peek2      = s.peek();
+       var clear      = s.clear();
+
+      // var palindrome = isPalindrome("racecar");
+
+
+
+       $(document).ready(function(){
+
+           $("#peek").append(peek);
+           $("#len").append(length);
+           $("#pop").append(pop);
+           $("#peek2").append(peek2);
+           $("#clear").append(clear);
+           //$("#pal").append(palindrome)
+
+       });
+
+
+
 
    </script>
 
@@ -16,6 +44,11 @@
 
 
     <h1> Stacks implementation </h1>
+    <p></p>
+    <h3>Using Peek to se the value of first elemnt on top of the stack: <span id="peek"></span></h3>
+    <h3>Get Length: <span id="len"></span></h3>
+    <h3>Pop  a value from stack: <span id="pop"></span></h3>
+    <h3>Is Palindrome "racecar" <span id="pal"></span></h3>
 
 </body>
 </html>
